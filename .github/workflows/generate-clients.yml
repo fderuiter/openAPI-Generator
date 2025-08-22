@@ -18,13 +18,13 @@ jobs:
       contents: write
     steps:
       # checkout the exact commit validated in the previous workflow
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
         with:
           fetch-depth: 0
           ref: ${{ github.event.workflow_run.head_sha || github.sha }}
 
       - name: Generate ${{ matrix.lang }} client
-        uses: openapi-generators/openapitools-generator-action@v1.5.0
+        uses: openapi-generators/openapitools-generator-action@b729d184e6b3459572c37c0e37f88a832e69b552 # v1.5.0
         with:
           generator: ${{ matrix.lang }}
           openapi-file: spec/openapi.yaml
