@@ -48,15 +48,6 @@ a spec to publishing docs.
   `generated-<language>-client`. You can adjust the language matrix to suit your
   needs.
 
-### `build-docs.yml`
-
-* **Trigger:** After a successful `validate-openapi.yml` run or manual
-  invocation.
-* **Purpose:** Bundles static HTML documentation using ReDoc and pushes the
-  result to the `generated-docs` branch. The workflow also uploads the site as a
-  Pages artifact and deploys it using `actions/deploy-pages` so the API docs are
-  published with GitHub Pages.
-
 ### `deploy-api-docs.yml`
 
 * **Trigger:** Pushes to `main`, after validation succeeds, or manual invocation.
